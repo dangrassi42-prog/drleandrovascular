@@ -5,11 +5,18 @@ export function Monogram({ className }: { className?: string }) {
     <span
       aria-hidden="true"
       className={cn(
-        "relative grid size-10 shrink-0 place-items-center rounded-full border border-wine/30 bg-wine-soft font-display text-lg italic font-semibold text-wine",
+        "relative grid size-10 shrink-0 place-items-center rounded-full border border-wine/30 overflow-hidden",
         className,
       )}
     >
-      LF
+      <img
+        src="/uploads/IMG_8473.jpeg"
+        alt="Logo Dr. Leandro Fernandes"
+        className="size-full object-cover"
+        loading="eager"
+        width={144}
+        height={144}
+      />
     </span>
   );
 }
