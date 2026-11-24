@@ -1,0 +1,66 @@
+export const CONTENT_KEYS = [
+  "doctor_name",
+  "specialty",
+  "crm",
+  "rqe",
+  "city",
+  "whatsapp_number",
+  "whatsapp_message",
+  "instagram",
+  "hero_title",
+  "hero_subtitle",
+  "hero_image_url",
+  "about_title",
+  "about_text",
+  "about_image_url",
+  "varizes_title",
+  "varizes_text",
+  "varizes_image_url",
+  "contact_intro",
+] as const;
+
+export type ContentKey = (typeof CONTENT_KEYS)[number];
+
+export const DEFAULT_CONTENT: Record<ContentKey, string> = {
+  doctor_name: "Dr. Leandro Fernandes",
+  specialty: "Angiologia, Cirurgia Vascular e Endovascular",
+  crm: "CRM/BA 27444",
+  rqe: "RQE 22658 · RQE 22675",
+  city: "Irecê – Bahia",
+  whatsapp_number: "5574999331012",
+  whatsapp_message: "Olá! Gostaria de agendar uma consulta com o Dr. Leandro Fernandes.",
+  instagram: "drleandro.vascular",
+  hero_title: "Cuidado especializado para a saúde vascular das suas pernas.",
+  hero_subtitle:
+    "Atendimento humanizado, avaliação especializada e tratamentos vasculares individualizados, com foco no bem-estar e na qualidade de vida.",
+  hero_image_url: "",
+  about_title: "Medicina vascular com escuta, cuidado e precisão.",
+  about_text: "",
+  about_image_url: "",
+  varizes_title: "Cuide da saúde das suas pernas.",
+  varizes_text:
+    "Conheça as possibilidades de avaliação e tratamento das varizes, com uma abordagem individualizada para cada paciente.",
+  varizes_image_url: "",
+  contact_intro: "Agende sua consulta pelo WhatsApp ou envie uma mensagem.",
+};
+
+export const CONTENT_LABELS: Record<ContentKey, { label: string; multiline?: boolean; image?: boolean; help?: string }> = {
+  doctor_name: { label: "Nome do médico" },
+  specialty: { label: "Especialidade" },
+  crm: { label: "CRM" },
+  rqe: { label: "RQE" },
+  city: { label: "Cidade" },
+  whatsapp_number: { label: "WhatsApp (com DDI e DDD)", help: "Ex.: 55 74 99933-1012" },
+  whatsapp_message: { label: "Mensagem inicial do WhatsApp", multiline: true },
+  instagram: { label: "Instagram (sem @)" },
+  hero_title: { label: "Título principal", multiline: true },
+  hero_subtitle: { label: "Subtítulo principal", multiline: true },
+  hero_image_url: { label: "Foto principal", image: true },
+  about_title: { label: "Título — Sobre o médico", multiline: true },
+  about_text: { label: "Texto — Sobre o médico", multiline: true, help: "Deixe uma linha em branco entre parágrafos." },
+  about_image_url: { label: "Foto — Sobre o médico", image: true },
+  varizes_title: { label: "Título — Varizes" },
+  varizes_text: { label: "Texto — Varizes", multiline: true },
+  varizes_image_url: { label: "Imagem — Varizes", image: true },
+  contact_intro: { label: "Texto — Contato", multiline: true },
+};
