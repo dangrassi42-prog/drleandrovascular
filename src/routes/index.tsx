@@ -1,23 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  Hero,
+  AboutSection,
+  ServicesGrid,
+  VarizesFeature,
+  LocationsGrid,
+  FaqList,
+  Testimonials,
+  CtaBand,
+} from "@/components/site/sections";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      {
+        name: "description",
+        content: "Dr. Leandro Fernandes - Angiologista e Cirurgião Vascular em Irecê - Bahia. Avaliação e tratamento de varizes, circulacao e saúde vascular. Agende sua consulta pelo WhatsApp.",
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen flex-col">
+      <Hero />
+      <AboutSection />
+      <ServicesGrid limit={3} />
+      <VarizesFeature />
+      <LocationsGrid />
+      <FaqList />
+      <Testimonials />
+      <CtaBand />
     </div>
   );
 }
