@@ -82,29 +82,29 @@
   --whatsapp-foreground: oklch(0.99 0 0);
 
   --background: oklch(0.993 0.002 250);
-  --foreground: oklch(0.23 0.05 263);
+  --foreground: oklch(0.21 0.045 263);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.23 0.05 263);
+  --card-foreground: oklch(0.21 0.045 263);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.23 0.05 263);
+  --popover-foreground: oklch(0.21 0.045 263);
   --primary: var(--navy);
   --primary-foreground: var(--navy-foreground);
   --secondary: oklch(0.955 0.012 255);
   --secondary-foreground: var(--navy);
   --muted: oklch(0.965 0.008 255);
-  --muted-foreground: oklch(0.49 0.03 260);
+  --muted-foreground: oklch(0.46 0.025 260);
   --accent: var(--wine);
   --accent-foreground: var(--wine-foreground);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.915 0.012 255);
+  --border: oklch(0.895 0.01 255);
   --input: oklch(0.9 0.014 255);
-  --ring: oklch(0.45 0.09 262);
+  --ring: oklch(0.42 0.085 262);
 
   --gradient-navy: linear-gradient(155deg, var(--navy-deep) 0%, var(--navy) 70%, oklch(0.34 0.09 258) 100%);
   --gradient-mist: linear-gradient(180deg, var(--background) 0%, var(--surface) 100%);
-  --shadow-soft: 0 1px 2px oklch(0.23 0.05 263 / 4%), 0 8px 24px -12px oklch(0.23 0.05 263 / 14%);
-  --shadow-elegant: 0 30px 60px -30px oklch(0.19 0.06 264 / 45%);
+  --shadow-soft: 0 1px 2px oklch(0.21 0.045 263 / 5%), 0 12px 28px -14px oklch(0.21 0.045 263 / 16%);
+  --shadow-elegant: 0 32px 64px -32px oklch(0.19 0.06 264 / 48%);
 
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);

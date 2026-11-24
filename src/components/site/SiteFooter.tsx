@@ -1,3 +1,4 @@
+import suit from "@/assets/dr-leandro-terno.webp.asset.json";
 import { Link } from "@tanstack/react-router";
 import { MapPin } from "lucide-react";
 import { useSite } from "@/lib/site-query";
@@ -12,7 +13,7 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-navy-deep text-navy-foreground">
-      <div className="container-page grid gap-12 py-16 md:grid-cols-12 md:py-20">
+      <div className="container-page grid gap-16 py-20 md:grid-cols-12 md:py-28">
         <div className="md:col-span-5">
           <div className="flex items-center gap-3">
             <Monogram className="border-navy-foreground/20 bg-navy-foreground/5 text-wine-soft" />
@@ -26,7 +27,7 @@ export function SiteFooter() {
           </p>
           <p className="mt-1 text-sm text-navy-muted">{c("city")}</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             {link && (
               <a
                 href={link}
@@ -50,8 +51,8 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-3">
-          <p className="eyebrow text-wine-soft">Navegação</p>
-          <ul className="mt-4 grid grid-cols-2 gap-2 text-sm md:grid-cols-1">
+          <p className="eyebrow text-wine-soft mb-4">Navegação</p>
+          <ul className="mt-0 grid grid-cols-2 gap-2 text-sm md:grid-cols-1">
             {NAV_ITEMS.map((item) => (
               <li key={item.to}>
                 <Link to={item.to} className="text-navy-muted transition-colors hover:text-navy-foreground">
@@ -63,10 +64,10 @@ export function SiteFooter() {
         </div>
 
         <div className="md:col-span-4">
-          <p className="eyebrow text-wine-soft">Locais de atendimento</p>
-          <ul className="mt-4 space-y-3 text-sm">
+          <p className="eyebrow text-wine-soft mb-4">Locais de atendimento</p>
+          <ul className="mt-0 space-y-4 text-sm">
             {locations.map((l) => (
-              <li key={l.id} className="flex gap-2">
+              <li key={l.id} className="flex gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-wine-soft" />
                 <span>
                   <span className="block text-navy-foreground">{l.name}</span>
@@ -79,12 +80,12 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-navy-foreground/10">
-        <div className="container-page flex flex-col gap-4 py-6 text-xs text-navy-muted md:flex-row md:items-center md:justify-between">
-          <p className="max-w-2xl">
+        <div className="container-page flex flex-col gap-5 py-8 text-xs text-navy-muted md:flex-row md:items-center md:justify-between md:py-10">
+          <p className="max-w-2xl leading-relaxed">
             O conteúdo deste site tem caráter exclusivamente informativo e não substitui a consulta médica.
             Diagnóstico e tratamento dependem de avaliação individual.
           </p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link to="/privacidade" className="hover:text-navy-foreground">
               Política de privacidade
             </Link>

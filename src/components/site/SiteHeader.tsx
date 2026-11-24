@@ -13,7 +13,7 @@ export function SiteHeader() {
   const link = wa();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-2xl">
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
         <Link to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
           <Monogram />
@@ -33,8 +33,8 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="rounded-full px-3 py-2 text-sm font-medium text-foreground/75 transition-colors hover:text-navy"
-              activeProps={{ className: "text-navy" }}
+              className="rounded-full px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-navy hover:bg-navy/5"
+              activeProps={{ className: "text-wine font-semibold bg-wine/10" }}
             >
               {item.label}
             </Link>
@@ -64,7 +64,7 @@ export function SiteHeader() {
 
       <div
         className={cn(
-          "grid overflow-hidden border-t border-border/70 bg-background transition-[grid-template-rows] duration-300 lg:hidden",
+          "grid overflow-hidden border-t border-border/60 bg-background transition-[grid-template-rows] duration-300 lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr] border-transparent",
         )}
       >
@@ -76,7 +76,7 @@ export function SiteHeader() {
                 to={item.to}
                 activeOptions={{ exact: item.to === "/" }}
                 onClick={() => setOpen(false)}
-                className="border-b border-border/60 py-3.5 font-display text-xl text-foreground last:border-0"
+                className="border-b border-border/60 py-3.5 font-display text-xl text-foreground last:border-0 transition-colors hover:bg-navy/5"
                 activeProps={{ className: "text-wine" }}
               >
                 {item.label}
