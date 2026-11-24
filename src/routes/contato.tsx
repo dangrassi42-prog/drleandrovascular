@@ -13,7 +13,7 @@ import { useSite } from "@/lib/site-query";
 import { formatPhoneBR, contactWhatsappMessage } from "@/lib/whatsapp";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
-import sonner from "sonner";
+import { toast as sonner } from "sonner";
 
 export const Route = createFileRoute("/contato")({
   component: Contato,
@@ -42,7 +42,8 @@ function Contato() {
 
     const waMessage = contactWhatsappMessage({ name, phone, reason });
     if (link) {
-      window.open(`${link}?text=${encodeURIComponent(waMessage)}`, "_blank");
+      const baseUrl = link.split("?")[0];
+      window.open(`${baseUrl}?text=${encodeURIComponent(waMessage)}`, "_blank");
     }
     setSubmitting(true);
     sonner.success("Mensagem aberta no WhatsApp", {
